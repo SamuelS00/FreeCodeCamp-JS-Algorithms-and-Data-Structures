@@ -1,8 +1,17 @@
+import mocha from 'mocha';
+import { expect } from 'chai';
 import sumAll from './ex';
-import { assert } from '../testLib';
 
-assert('should return 45', sumAll([5, 10]) === 45);
+describe('test sum all numbers in a range function', () => {
+  it('should return 45', () => {
+    expect(sumAll([5, 10])).to.be.equal(45);
+  });
+  
+  it('should return 10', () => {
+    expect(sumAll([4, 1])).to.be.equal(10);
+  });
 
-assert('should return 10', sumAll([4, 1]) === 10);
-
-assert('should return 45', sumAll([10, 5]) === 45);
+  it('should return 45', () => {
+    expect(sumAll([10, 5])).to.be.equal(45);
+  });
+});
