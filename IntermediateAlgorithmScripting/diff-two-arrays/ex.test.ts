@@ -1,4 +1,5 @@
-import { assert, equal } from '../testLib';
+import mocha from 'mocha';
+import { expect } from 'chai';
 
 import {
   diffArrResult1,
@@ -7,12 +8,21 @@ import {
   diffArrResult4 
 } from './results';
 
-assert('1- should return an array', Array.isArray(diffArrResult1));
+describe('test diff two arrays function', () => {
+  it('should return an array', () => {
+    expect(Array.isArray(diffArrResult1)).to.be.equal(true);
+  });
 
-equal('2 - should return ["pink wool"]', diffArrResult2, ["pink wool"]);
+  it('should return ["pink wool" and array with one item]', () => {
+    expect(diffArrResult2.length).to.be.equal(1);
+    expect(diffArrResult2).to.be.deep.equal(["pink wool"]);
+  });
 
-assert('3 - should return an array with one item.', diffArrResult2.length === 1);
+  it('should return ["diorite", "pink wool"]', () => {
+    expect(diffArrResult3).to.be.deep.equal(["pink wool", "diorite"]);
+  })
 
-equal('4 - should return ["diorite", "pink wool"].', diffArrResult3, ["diorite", "pink wool"]);
-
-equal('5 - should return an empty array..', diffArrResult4, []);
+  it('should return an empty array', () => {
+    expect(diffArrResult4).to.be.deep.equal([])
+  })
+});
