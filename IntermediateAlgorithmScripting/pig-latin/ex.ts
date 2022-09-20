@@ -20,7 +20,7 @@ function translatePigLatin(str: string) {
   }
   
   // check if the first letter is a consonant, if it is return the string concatenated with "way"
-  if (firstLetter.match(/[aeiou]/i)) { // verifica se a primeira letra é vogal (não é consoante)
+  if (firstLetter.match(/[aeiou]/i)) {
     return arrStr.join('').concat('way');
   }
   
