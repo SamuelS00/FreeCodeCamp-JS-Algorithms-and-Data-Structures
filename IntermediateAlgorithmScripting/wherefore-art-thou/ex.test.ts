@@ -8,7 +8,7 @@ import {
   whatIsInANameResult4
 } from './results'
 
-describe.only('test sum all numbers in a range function', () => {
+describe('test sum all numbers in a range function', () => {
   it('should return [{ first: "Tybalt", last: "Capulet" }]', () => {
 
     expect(whatIsInAName(whatIsInANameResult1, { "last": "Capulet" })
