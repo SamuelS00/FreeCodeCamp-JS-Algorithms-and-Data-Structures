@@ -2,7 +2,7 @@ import mocha from 'mocha';
 import { expect } from 'chai';
 import spinalCase from './ex';
 
-describe.only('test spinal tab case function', () => {
+describe('test spinal tab case function', () => {
   it('should return "this-is-spinal-tap"', () => {
     expect(spinalCase("This Is Spinal Tap")).to.be.equal("this-is-spinal-tap");
   });
