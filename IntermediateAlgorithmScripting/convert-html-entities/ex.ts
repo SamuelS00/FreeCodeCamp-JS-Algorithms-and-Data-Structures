@@ -10,8 +10,6 @@ function getValues<T, R extends keyof T>(obj: T, propertyName: R) {
   return obj[propertyName];
 };
 
-// getValues<propertyName, keyof propertyName>(obj, key as keyof propertyName);
-
 function convertHTML(str: string) {
     const htmlEntities: HtmlEntities = {
         "&": "&amp;",
