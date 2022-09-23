@@ -1,6 +1,8 @@
 import mocha from 'mocha';
 import { expect } from 'chai';
 
+import convertHTML from './ex';
+
 describe('test convertHTML function', () => {
   it('convertHTML("Dolce & Gabbana") should return the string Dolce &amp; Gabbana.', () => {
     expect(convertHTML("Dolce & Gabbana")).to.be.equal('Dolce &amp; Gabbana');
@@ -15,7 +17,7 @@ describe('test convertHTML function', () => {
   });
 
   it('Waiting:convertHTML(\'/Stuff in "quotation marks"\') should return the string Stuff in &quot;quotation marks&quot', () => {
-    expect(convertHTML('Stuff in "quotation marks"')).to.be.equal('Stuff in &quot;quotation marks&quot')
+    expect(convertHTML('Stuff in "quotation marks"')).to.be.equal('Stuff in &quot;quotation marks&quot;')
   });
 
   it('convertHTML("Schindler\'s List") should return the string Schindler&apos;s List', () => {
