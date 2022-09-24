@@ -3,7 +3,7 @@ import { expect } from 'chai';
 
 import sumPrimes from './ex'
 
-describe.only('test sumPrime function', () => {
+describe('test sumPrime function', () => {
   it('sumPrimes(10) should return a number', () => {
     expect(typeof sumPrimes(10)).to.be.equal('number');
   });
