@@ -19,6 +19,4 @@ function sumPrimes(num: number) {
   return sum;
 };
 
-console.log(sumPrimes(10));
-
 export default sumPrimes;
