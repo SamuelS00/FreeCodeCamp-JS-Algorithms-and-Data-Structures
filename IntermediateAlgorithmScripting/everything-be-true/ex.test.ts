@@ -16,7 +16,7 @@ import {
   truthCheckResult10
 } from './results';
 
-describe.only('test truthCheck function', () => {
+describe('test truthCheck function', () => {
   it('truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot") should return false', () => {
     expect(truthCheckResult1).to.be.deep.equal(false);
   });
