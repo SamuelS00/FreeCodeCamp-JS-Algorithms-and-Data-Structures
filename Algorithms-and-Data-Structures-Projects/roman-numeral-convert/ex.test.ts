@@ -1,7 +1,12 @@
 import mocha from 'mocha';
 import { expect } from 'chai';
 
-import convertToRoman from './ex';
+import { 
+  convertToRoman,
+  // filterRomanNumerals,
+  concatFunction,
+  decomposeNumber,
+} from './ex';
 
 describe('test convertToRoman function', () => {
   it('convertToRoman(2) should return the string II', () => {
@@ -107,4 +112,36 @@ describe('test convertToRoman function', () => {
   it('convertToRoman(3999) should return the string MMMCMXCIX', () => {
     expect(convertToRoman(3999)).to.be.equal('MMMCMXCIX');
   });
+});
+
+describe('test decomposeNumber function', () => {
+  it('decomposeNumber(4) should return the array [{ zeros: 0, value: 4 }]', () => {
+    expect(decomposeNumber(4)).to.be.deep.equal([{ zeros: 0, value: 4 }]);
+  });
+
+  it('decomposeNumber(23) should return the array [{ zeros: 0, value: 30 }, { zeros: 0, value: 3 }]', () => {
+    expect(decomposeNumber(23)).to.be.deep.equal([{ zeros: 1, value: 20 }, { zeros: 0, value: 3 }]);
+  });
+
+  it('decomposeNumber(786) should return the array [{ zeros: 2, value: 700 }, { zeros: 1, value: 80 }, { zeros: 0, value: 6 }] ', () => {
+    expect(decomposeNumber(786)).to.be.deep.equal([{ zeros: 2, value: 700 }, { zeros: 1, value: 80 }, { zeros: 0, value: 6 }]);
+  });
+
+  it('decomposeNumber(3978) should return the array [{ zeros: 3, value: 3000 }, { zeros: 2, value: 900 }, { zeros: 1, value: 70 }, { zeros: 0, value: 8 }] ', () => {
+    expect(decomposeNumber(3978)).to.be.deep.equal([{ zeros: 3, value: 3000 }, { zeros: 2, value: 900 }, { zeros: 1, value: 70 }, { zeros: 0, value: 8 }]);
+  });
+});
+
+describe('test concatFunction', () => {
+  it('concatFunction(["L", X", "X", "X", "I", "", "I"] should to return "LXXXII")', () => {
+    expect(concatFunction(["L", "X", "X", "X", "I", "I"])).to.be.equal('LXXXII')
+  });
+
+  it('concatFunction(["V", "A", "S", "", "C", "O"] should to return "VASCO")', () => {
+    expect(concatFunction(["V", "A", "S", "", "C", "O"])).to.be.equal('VASCO')
+  });
+});
+
+describe('test filterRomanNumerals function', () => {
+  
 });
