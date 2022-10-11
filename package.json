@@ -1,10 +1,10 @@
 {
-  "name": "intermediatealgorithmscripting",
+  "name": "algorithmsanddatastructuresprojects",
   "version": "1.0.0",
   "description": "Repository created with the purpose of solving algorithms from the course of JavaScript algorithms and data structure of freeCodeCamp.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ts-node/register **/**test.ts"
+    "test": "mocha --require ts-node/register **/**/**test.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,3 +20,4 @@
     "typescript": "^4.8.3"
   }
 }
+  
