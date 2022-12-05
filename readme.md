@@ -1,3 +1,9 @@
+![](image/readme/1670200751261.png)
+
+---
+
+
+
 * [X] **Basic JavaScrip**t: `113/113` - fundamental programming concepts in JavaScript. You'll start with basic data structures like numbers and strings. Then you'll learn to work with arrays, objects, functions, loops, if/else statements, and more.
 * [X] **ES6**: `29/29` - ES6, released in 2015, added many powerful new features to the language. In this course, you'll learn these new features, including arrow functions, destructuring, classes, promises, and modules.
 * [X] **Regular Expressions**:  `33/33` - how to use special characters, capture groups, positive and negative lookaheads, and other techniques to match any text you want.
